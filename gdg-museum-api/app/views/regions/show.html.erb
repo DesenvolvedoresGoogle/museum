@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @region.name %>
+</p>
+
+<p>
+  <strong>Major:</strong>
+  <%= @region.major %>
+</p>
+
+<p>
+  <strong>Museum:</strong>
+  <%= @region.museum.name if !@region.museum.nil? %>
+</p>
+
+<%= link_to 'Edit', edit_region_path(@region) %> |
+<%= link_to 'Back', regions_path %>

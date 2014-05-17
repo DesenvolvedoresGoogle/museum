@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @art.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @art.image %>
+</p>
+
+<p>
+  <strong>Minor:</strong>
+  <%= @art.minor %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @art.region.name if !@art.region.nil? %>
+</p>
+
+
+<%= link_to 'Edit', edit_art_path(@art) %> |
+<%= link_to 'Back', arts_path %>

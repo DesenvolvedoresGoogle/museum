@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @museum.name %>
+</p>
+
+<p>
+  <strong>Uuid:</strong>
+  <%= @museum.uuid %>
+</p>
+
+<%= link_to 'Edit', edit_museum_path(@museum) %> |
+<%= link_to 'Back', museums_path %>

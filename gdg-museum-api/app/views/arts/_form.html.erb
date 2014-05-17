@@ -1,0 +1,35 @@
+<%= form_for(@art) do |f| %>
+  <% if @art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@art.errors.count, "error") %> prohibited this art from being saved:</h2>
+
+      <ul>
+      <% @art.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :minor %><br>
+    <%= f.text_field :minor %>
+  </div>
+
+  <div class="field">
+    <%= f.label :region_id %><br>
+    <%= f.select :region_id, options_for_select(Region.all.map{|r|[r.name, r.id]}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+defaults: &defaults
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: postgres
+  password: kimitachi
+  host: localhost
+
+development:
+  <<: *defaults
+  database: gdg-museum-api_development
+
+test:
+  <<: *defaults
+  database: gdg-museum-api_test
+
+production:
+  <<: *defaults
+  database: gdg-museum-api_production
